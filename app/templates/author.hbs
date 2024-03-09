@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="main-box">
+    <h3>{{model.name}}</h3>
+
+    <p><strong>Biography</strong>: {{model.biography}}</p>
+
+    <h4>Published titles:</h4>
+    <ul>
+      {{#each model.books as |book|}}
+        {{book-cover book=book blurBackground=(route-action "blurBackground")}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
